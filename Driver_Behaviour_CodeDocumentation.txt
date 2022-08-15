@@ -1,0 +1,79 @@
+'''
+other_activity_images: List containing images when class label is 'other_activities'
+safe_driving_images: List containing images when class label is 'safe_driving'
+talking_phone_images: List containing images when class label is 'talking_phone'
+texting_phone_images: List containing images when class label is 'texting_phone'
+turning_images: List containing images when class label is 'turning'
+'''
+
+'''
+images: list of all images from all the sub folders of activities
+'''
+
+'''
+df= pandas dataframe with columns ['activity_type', 'image_id']. Here, 'image_id' contains values not directed to appropriate image paths
+'''
+
+'''
+edit_image_path():
+	'''
+	input: string the path needs to be attached to
+	output: the concatenated string of path and input
+	'''
+'''
+
+'''
+df2: dataframe with the value of column 'activity_type' as 'other_activities'
+df3: dataframe with the value of column 'activity_type' as 'safe_driving'
+df4: dataframe with the value of column 'activity_type' as 'talking_phone'
+df5: dataframe with the value of column 'activity_type' as 'texting_phone'
+df6: dataframe with the value of column 'activity_type' as 'turning'
+'''
+
+'''
+frames: list of the individual activities dataframes [df2, df3, df4, df5, df6]
+final_df: dataframe with columns ['activity_type', 'image_id'], with values of 'image_id' as the correct image paths
+'''
+
+'''
+train_df: training split of images
+test_df: testing split of images (0.3)
+'''
+
+'''
+ImageDataGenerator: generates batches of tensor image data with real-time data augmentation
+
+	'''
+	Argument: preprocessing_function= preprocess_input as imported from MobileNet_v2 application
+	'''
+'''
+
+'''
+train_gen: imports and scales the training images
+val_gen: imports and scales the validation images (split=0.2)
+test_gen: imports the testing images
+'''
+
+'''
+model: MobileNetV2 model architecture is used, pertained on the ImageNet database
+'''
+
+'''
+compile(): the model is configured with optimiser [adam], loss [categorical cross entropy] and metric [accuracy]
+'''
+
+'''
+my_callbacks: initialise callbacks argument with an early stopping condition based on validation accuracy to prevent overfitting
+'''
+
+'''
+history: fitting of model onto train_gen, over 25 epochs subject to callbacks over validation sets
+'''
+
+'''
+results: model evaluation and metric display on the test dataset
+'''
+
+'''
+labels: list of predicted class labels of test images
+'''

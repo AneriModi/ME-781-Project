@@ -1,0 +1,49 @@
+'''
+df= dataframe which contains the following columns:
+	'''
+	id: Unique integer id
+	Gender: Gender of the customer (Male/Female)
+	Age: Age of the customer (Integer value)
+	Driving_License: (0: Customer does not have a DL, 1: Customer has a DL)
+	Region_Code: Unique code for the region of the customer
+	Previously_Insured: (0: Customer has no Vehicle insurance, 1: Customer has vehicle insurance)
+	Vehicle_Age: Age of the vehicle in years
+	Vehicle_Damage: (0: No vehicle damage in the past, 1: Vehicle damage occurred in the past)
+	Annual_Premium: The amount the customer needs to pay as premium in the year (decimal)
+	Policy_Sales_Channel: Anonymised code for the channel of outreach to the customer
+	Vintage: No. Of days customer has been associated with our company
+	Response: (1: Customer is interested in insurance purchase, 0: Customer is not interested)
+	'''
+'''
+
+'''
+categorical_cols: list of names of columns of dataframe that are categorical in nature
+continuousvariables: list of names of columns of dataframe that are continuous numeric in nature
+'''
+
+'''
+X: dataset containing records with features as the columns 
+Y: list of corresponding responses of the customer
+'''
+
+'''
+X_train, Y_training: training dataset 
+X_test, Y_test: testing dataset
+X_extra, Y_extra: dataset that remains after forming the above two. Due to insufficient computational power, the entire dataset could not be taken into account.
+'''
+
+'''
+downsampled: dataframe with downsampled majority along with the minority class, i.e., after resampling to deal with the largely skewed dataset
+'''
+
+'''
+classifier_svc: initialisation of the SVC model used for training, with hyperparameters as C=10 and kernel=poly. Hyperparameter tuning was done by trying combinations of kernel=[poly, rbf] and C=[0.1, 1, 10], to see which gave the best accuracy.
+'''
+
+'''
+Y_pred: the predicted label ('Response') for the test dataset (X_test)
+'''
+
+'''
+disp: Initialization of confusion matrix display to observe the precision and recall of the two classes
+'''		

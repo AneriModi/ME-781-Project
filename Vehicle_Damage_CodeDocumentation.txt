@@ -1,0 +1,54 @@
+'''
+data: pandas dataframe with three columns ['Unnamed:0', 'image','classes'], with unique image path as values for 'image' column and vehicle damage label as value for 'classes' column
+'''
+
+'''
+edit_image_path():
+	'''
+	input: string the path needs to be attached to
+	output: the concatenated string of path and input
+	'''
+'''
+
+'''
+train_df: training split of images
+test_df: testing split of images (0.3)
+'''
+
+'''
+ImageDataGenerator: generates batches of tensor image data with real-time data augmentation
+
+	'''
+	Argument: preprocessing_function= preprocess_input as imported from MobileNet_v2 application
+	'''
+'''
+
+'''
+train_gen: imports and scales the training images
+val_gen: imports and scales the validation images (split=0.2)
+test_gen: imports the testing images
+'''
+
+'''
+model: MobileNetV2 model architecture is used, pertained on the ImageNet database
+'''
+
+'''
+compile(): the model is configured with optimiser [adam], loss [categorical cross entropy] and metric [accuracy]
+'''
+
+'''
+my_callbacks: initialise callbacks argument with an early stopping condition based on validation accuracy to prevent overfitting
+'''
+
+'''
+history: fitting of model onto train_gen, over 50 epochs subject to callbacks over validation sets
+'''
+
+'''
+results: model evaluation and metric display on the test dataset
+'''
+
+'''
+labels: list of predicted class labels of test images
+'''
